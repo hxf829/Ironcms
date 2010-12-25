@@ -1,0 +1,97 @@
+﻿/*修改所有margin,padding为0*/
+body,div{
+margin:0px; padding:0;
+}
+
+body{
+font-size:12px;
+padding:12px;
+background-color:#f3f9ff;
+}
+
+td{
+font-size:12px;
+}
+
+.label{
+background-color:#ddeeff;
+text-align:right;
+vertical-align:middle;
+font-size:12px;
+height:22px;
+}
+.header{
+background:url(../images/main_tab1.png);
+color:#FFFFFF;
+font-weight:bold;
+height:27px;
+}
+.function{
+font-size:12px;
+border:1px solid #92bff1;
+}
+.function a{
+font-size:13px;
+text-decoration:none;
+color:#000000;
+}
+.function a:hover{
+font-size:13px;
+text-decoration:underline;
+color:#990000;
+}
+#navigation{
+font-size:12px;
+font-weight:bold;
+padding-bottom:5px;
+}
+#navigation a{
+font-size:12px;
+text-decoration:none;
+font-weight:normal;
+color:#000000;
+}
+.list{
+height:24px;
+background-color:#ffffff;
+}
+.list_onmousemove{
+height:24px;
+background-color:#e1ffff;
+}
+#showpage{
+padding-top:3px;
+text-align:center;
+}
+#showpage a{
+text-decoration:none;
+font-size:13px;
+color:#000000;
+}
+#showpage a:hover{
+color:#FF0000;
+text-decoration:underline;
+}
+.attributeinput input{
+width:400px;
+}
+.attributeinput textarea{
+width:400px;
+}
+.attributeinput select{
+width:400px;
+}
+.sblack13{
+font-size:13px;
+}
+.poweredit td{
+height:24px;
+}
+.admininfo input{
+height:18px;
+width:200px;
+}
+.segmentline td{
+background:#CCCCCC;
+height:1px;
+}

@@ -1,0 +1,108 @@
+/*修改所有margin,padding为0*/
+body,div{
+margin:0px; padding:0;
+}
+body{
+background-color:#185d7b;
+}
+table{
+border:0px;
+cellspacing:0px;
+cellpadding:0px;
+}
+span{
+font-family:"微软雅黑","黑体","宋体";
+color:#FFFFFF;
+}
+input{
+border-width:0px;
+width:212px;
+font-family:"微软雅黑","宋体";
+color:#666666;
+font-size:12px;
+margin-left:4px;
+margin-top:1px;
+}
+#confirmstr{
+position:relative;
+top:-4px;
+border-width:0px;
+width:149px;
+}
+
+/*第一部分图片&单位信息样式开始*/
+#main1{
+text-align:center;
+margin-top:150px;
+padding-top:2px;
+padding-left:2px;
+}
+#m1_pic{
+width:80px;
+height:66px;
+background:url(../images/login_pic1.png) no-repeat;
+}
+#m1_text{
+float:left;
+}
+#m1_text_user{
+font-size:18px;
+padding-top:6px;
+text-align:left;
+}
+#m1_text_login{
+font-size:12px;
+padding-top:9px;
+text-align:left;
+}
+/*第一部分图片&单位信息样式结束*/
+
+/*第二部分登录表单样式结束*/
+#main2{
+text-align:center;
+margin-top:40px;
+}
+#main2 td{
+width:225px;
+height:40px;
+}
+#m2_input1{
+background:url(../images/login_input_bg.png) no-repeat;
+}
+#m2_input2{
+background:url(../images/login_input_bg.png) no-repeat;
+}
+#m2_input3{
+background:url(../images/login_input_bg.png) no-repeat;
+}
+#m2_input3 img{
+padding-left:0px;
+padding-top:1px;
+}
+#m2_bt_out{
+width:83px;
+height:28px;
+background:url(../images/login_button1.png) no-repeat;
+color:#FFFFFF;
+font-size:15px;
+}
+#m2_bt_over{
+width:83px;
+height:28px;
+background:url(../images/login_button2.png) no-repeat;
+color:#FFFFFF;
+font-size:15px;
+}
+/*第二部分登录表单样式结束*/
+
+#logo{
+width:100%;
+position:absolute;
+bottom:5px;
+z-index:-1;
+}
+#logo td{
+width:399px;
+height:82px;
+background:url(../images/login_pic_logo.png) no-repeat;
+}

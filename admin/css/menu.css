@@ -1,0 +1,64 @@
+div.sdmenu{
+	width:141px;
+	font-family:Arial, sans-serif;
+	font-size:12px;
+	padding-bottom:12px;
+	position:relative;
+	top:0px;
+	background: url(../images/index_left_menu3.png) no-repeat left bottom;
+	color:#000000;
+}
+#copyright{
+	position:relative;
+	top:5px;
+	left:10px;
+	font-size:12px;
+	color:#2b2b2b;
+	line-height:20px;
+}
+div.sdmenu div {
+	background:url(../images/index_left_menu2.png) no-repeat;
+	overflow:hidden;
+}
+div.sdmenu div:first-child {
+	background:url(../images/index_left_menu1.png) no-repeat;
+	overflow:hidden;
+}
+/*div.sdmenu div.collapsed {
+	height:25px;
+}*/
+div.sdmenu div span {
+	padding-left:22px;
+	line-height:25px;
+	color:#003168;
+	cursor:pointer;
+	display:block;
+	word-break:keep-all;/*不换行*/
+	white-space:nowrap;/*不换行*/
+	overflow:hidden;
+	text-overflow:ellipsis;/*当对象内文本溢出时显示省略标记(...)；需与overflow:hidden;一起使用*/
+}/*大栏目*/
+div.sdmenu div div{
+	width:139px;
+	border-left:1px solid #364b66;
+	border-right:1px solid #364b66;
+	border-bottom:1px solid #364b66;
+}/*下部隐藏块背景*/
+
+div.sdmenu div a{
+	display:block;
+	padding-left:15px;
+	line-height:25px;
+	background:#e3f7ff;
+	color:#2a2a2a;
+	text-decoration:none;
+}
+div.sdmenu div a:hover {
+	color: #ffffff;
+	text-decoration:underline;
+	background:#2676a6 url(../image/linkarrow.gif) no-repeat right center;
+	text-decoration: none;
+}
+div.sdmenu div a.current {
+	background : #ccc;
+}

@@ -1,0 +1,13 @@
+﻿.showpage{
+padding-top:3px;
+text-align:center;
+}
+.showpage a{
+text-decoration:none;
+font-size:13px;
+color:#000000;
+}
+.showpage a:hover{
+color:#FF0000;
+text-decoration:underline;
+}

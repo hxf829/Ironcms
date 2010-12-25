@@ -1,0 +1,72 @@
+/* CSS Document */
+body{
+margin:0px;
+}
+#left{
+width:150px;
+padding-left:5px;
+float:left;
+}
+#right{
+float:left;
+width:100%;
+/*background-color:#003366;*/
+}
+#top{
+background:url(../image/toptitle_right.gif);
+width:100%;
+float:right;
+height:25px;
+}
+#tip{
+float:left;
+padding-left:20px;
+padding-top:3px;
+font-family:"ºÚÌå", "Î¢ÈíÑÅºÚ";
+color:#FFFFFF;
+}
+#time{
+float:right;
+height:25px;
+width:230px;
+background:url(../image/timebg.jpg);
+}
+#time span{
+float:right;
+font-size:12px;
+padding-top:6px;
+padding-right:20px;
+}
+.clear{
+clear:both;
+}
+#mainframe{
+/*margin-top:1px;*/
+border:1px solid #CCCCCC;
+width:100%-2px;
+}
+#admin_tips{
+margin-top:0px;
+border-left:1px solid #CCCCCC;
+border-right:1px solid #CCCCCC;
+border-top:none;
+border-bottom:none;
+height:24px;
+background-color:#fafce8;
+}
+#current_operation{
+float:left;
+padding-top:5px;
+font-size:13px;
+font-weight:bold;
+padding-left:20px;
+}
+#admin_formation{
+padding-right:30px;
+float:right;
+padding-top:6px;
+font-size:12px;
+}
+#admin_formation a{
+color:#FF0000;
+}

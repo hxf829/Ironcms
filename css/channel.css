@@ -1,0 +1,130 @@
+/* university & staff 样式 */
+#channel{
+width:708px;
+float:right;
+background-color:#eef4ff;
+border-left-color:#CCCCCC;
+border-left-style:solid;
+border-left-width:1px;
+}
+#content{
+text-align:justify;
+}
+#us_title{
+text-align:left;
+background-color:#ffffff;
+border:#8AC2F4 1px solid;
+font-family:Tahoma, Verdana;
+font-size:13px;
+font-weight:bold;
+color:#305188;
+padding:3px 0px 3px 15px;
+margin:15px 15px 5px 15px;
+}
+/*text-align:left;
+background-color:#ffffff;
+border:#8AC2F4 1px solid;
+font-family:Tahoma, Verdana;
+font-size:14px;
+font-weight:bold;
+color:#305188;
+padding:3px 0px 3px 15px;
+margin:15px 15px 5px 15px;*/
+#us_content{
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+color:#4272a2;
+line-height:18px;
+padding-left:15px;
+padding-right:15px;
+text-align:justify;
+}
+#us_pic{
+text-align:center;
+}
+#us_a{
+text-align:left;
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+line-height:22px;
+padding-left:15px;
+padding-right:15px;
+}
+#us_a a:link{
+color:#305188;
+text-decoration:underline;
+}
+#us_a a:hover{
+color:#D50000;
+}
+#us_a a:visited{
+color:#305188;
+}
+/* university & staff 样式结束 */
+
+/* Living on Campus & Administration & Service Departments 样式 */
+#la_line{
+height:1px;
+background-color:#993333;
+}
+#la_imga{
+text-align:left;
+}
+#la_imga a{
+font-family:Arial, Helvetica, sans-serif;
+font-size:13px;
+font-weight:bold;
+}
+#la_imga a:link{
+color:#305188;
+text-decoration:underline;
+}
+#la_imga a:hover{
+color:#D50000;
+}
+#la_imga a:visited{
+color:#305188;
+}
+
+#la_img{
+text-align:left;
+padding-left:20px;
+width:160px;
+height:45px;
+}
+/* Living on Campus & Administration & Service Departments 样式结束 */
+
+/* Prospective样式 */
+#p_tab1{
+background-color:#f1f4fa;
+}
+#p_tab2{
+background-color:#d3dcef;
+}
+
+#p_tab_title{
+float:left;
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+font-weight:bold;
+color:#305188;
+padding-left:10px;
+}
+#p_tab_a{
+float:right;
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+color:#305188;
+padding-right:10px;
+}
+#p_tab_a a:link{
+color:#305188;
+text-decoration:underline;
+}
+#p_tab_a a:hover{
+color:#D50000;
+}
+#p_tab_a a:visited{
+color:#305188;
+}
+/* Prospective样式结束 */
