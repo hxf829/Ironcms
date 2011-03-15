@@ -1,0 +1,620 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8;" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>Harbin Engineering University</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/front.js"></script>
+<link rel="stylesheet" type="text/css" href="css/redmond/jquery-ui-1.7.1.custom.css">
+<style type="text/css">
+<!--
+body{
+margin:0px; padding:0px; background:#666666;
+font-size:65%;
+}
+div{
+margin:0px; padding:0px;overflow:hidden; 
+}
+img{
+border:0px;
+}
+.navigatetext{
+width:119px;
+height:14px;
+}
+.navigatebottom{
+width:58px;
+height:21px;
+font-family:Tahoma, Verdana;
+color:#4a4949;
+font-size:10px;
+}
+#top{
+width:100%;
+height:101px;
+background:url(images/index_top_bg.png) repeat-x;
+text-align:center;
+}
+#top_logo_left{
+width:20px;
+height:101px;
+background:url(images/index_logo_left.png) no-repeat;
+}
+#top_logo{
+width:220px;
+height:101px;
+}
+#top_pic{
+width:760px;
+height:74px;
+background:url(images/index_top_pic.jpg) no-repeat;
+text-align:right;
+float:left;
+clear:right;
+}
+#top_pic span{
+font-family:Tahoma, Verdana;
+font-size:12px;
+color:#FFFFFF;
+line-height:20px;
+text-align:right;
+padding-right:20px;
+}
+#top_pic span a{
+color:#FFFFFF;
+text-decoration:none;
+}
+#top_pic span a:hover{
+color:#FFFFFF;
+text-decoration:underline;
+}
+#top_search{
+width:760px;
+height:27px;
+background:url(images/index_top_search.jpg) no-repeat;
+float:left;
+}
+#top_language{
+padding-left:20px;
+text-align:left;
+font-family:Tahoma, Verdana;
+color:#eeeeee;
+font-size:11px;
+line-height:25px;
+float:left;
+}
+#top_language a{
+color:#eeeeee;
+text-decoration:none;
+}
+#top_language a:hover{
+text-decoration:underline;
+}
+#top_search{
+text-align:right;
+float:right;
+}
+
+#location{
+background-color:#f77f00;
+height:25px;
+}
+#location_bg{
+width:1000px;
+background:url(images/index_top_location.jpg) no-repeat;
+text-align:left;
+}
+#location_text{
+text-align:left;
+padding-left:45px;
+font-family:Tahoma, Verdana;
+color:#FFFFFF;
+font-size:12px;
+line-height:23px;
+}
+#location_text a{
+color:#FFFFFF;
+text-decoration:none;
+}
+#location_text a:hover{
+color:#FFFFFF;
+text-decoration:underline;
+}
+#main_fg{
+width:100%;
+background:url(images/index_fg.png) repeat-x #ffffff;
+}
+#nav{
+width:220px;
+height:430px;
+}
+#email{
+width:220px;
+padding-top:15px;
+}
+#email_title{
+font-family:Arial, Tahoma;
+font-size:14px;
+font-weight:bold;
+color:#001f4a;
+text-align:left;
+height:25px;
+padding-left:14px;
+}
+
+/*main部分CSS开始*/
+#main_bg{
+width:740px;
+background:url(images/index_main_bg.png) repeat-y;
+}
+#main_note{
+width:740px;
+height:97px;
+background:url(images/index_main_top_bg.jpg) no-repeat;
+}
+#main_note div{
+padding:10px 15px 0px 15px;
+text-align:justify;
+font-family:Tahoma;
+font-size:12px;
+line-height:20px;
+color:#000000;
+text-indent:1em;
+}
+#main_note div span{
+color:#003c75;
+font-weight:bold;
+line-height:20px;
+}
+#main_left{
+width:527px;
+float:left;
+}
+#main_right{
+width:213px;
+float:left;
+}
+#main_news{
+width:501px;
+margin-left:7px;
+background:#fffce9 url(images/index_main_news_pic.png) no-repeat left top;
+border:#999999 1px dotted;
+}
+#main_news_title{
+font-family:Arial;
+font-size:14px;
+font-weight:bold;
+color:#1d476f;
+text-align:left;
+line-height:35px;
+padding-left:40px;
+}
+#main_news_more{
+font-family:Arial;
+font-size:12px;
+color:#1d476f;
+text-align:left;
+line-height:35px;
+padding-left:280px;
+}
+#main_news_more a{
+color:#1d476f;
+text-decoration:none;
+}
+#main_news_more a:hover{
+text-decoration:underline;
+}
+.main_news_line{
+height:1px;
+margin:0px 9px 0px 9px;
+background-color:#dddddd;
+}
+#main_news_fg{
+height:213px;
+margin:0px 9px 0px 9px;
+background-color:#ffffff;
+}
+#news_time{
+text-align:left;
+padding-left:10px;
+font-family:Verdana, Tahoma;
+color:#cc6600;
+font-size:9px;
+line-height:15px;
+}
+#news_title{
+text-align:left;
+padding-left:10px;
+font-family:Tahoma, Verdana;
+color:#003c79;
+font-size:11px;
+font-weight:bold;
+line-height:19px;
+}
+#news_title a{
+color:#003c79;
+text-decoration:none;
+}
+#news_title a:hover{
+text-decoration:underline;
+}
+.letterlink{
+text-align:center;
+font-family:Tahoma, Verdana;
+color:#7d7d7d;
+font-size:11px;
+line-height:31px;
+}
+.letterlink a{
+color:#7d7d7d;
+text-decoration:none;
+}
+.letterlink a:hover{
+text-decoration:underline;
+}
+#main_flash{
+width:522px;
+height:188px;
+background:url(images/index_main_flash_bg.png) left top no-repeat;
+padding:11px 0px 0px 5px;
+}
+.main_right_title{
+width:205px;
+height:30px;
+background:url(images/index_right_bar.png) no-repeat;
+font-family:Arial, Tahoma;
+font-size:14px;
+font-weight:bold;
+color:#ffffff;
+text-align:left;
+line-height:25px;
+padding-left:33px;
+}
+.main_right1{
+text-align:left;
+background:url(images/index_right_icon.gif) no-repeat 10px 9px;
+font-family:Arial, Tahoma;
+font-size:12px;
+font-weight:bold;
+padding-left:22px;
+line-height:26px;
+}
+.main_right1 a{
+color:#1d476f;
+text-decoration:none;
+}
+.main_right1 a:hover{
+text-decoration:underline;
+}
+.main_right2{
+text-align:left;
+background:url(images/index_right_icon.gif) no-repeat 10px 9px;
+font-family:Arial, Tahoma;
+font-size:12px;
+padding-left:22px;
+line-height:26px;
+}
+.main_right2 a{
+color:#1d476f;
+text-decoration:none;
+}
+.main_right2 a:hover{
+text-decoration:underline;
+}
+#main_right3 SELECT{
+width:190px;
+font-family:Tahoma, Verdana;
+font-size:11px;
+color:#444444;
+}
+/*main部分CSS结束*/
+
+#main_shadow{
+width:20px;
+background:url(images/index_fg_shadow.png) repeat-y left;
+}
+#bottom_line{
+background-color:#f77f00;
+height:3px;
+}
+#bottom_bg{
+background-color:#666666;
+padding-top:15px;
+padding-bottom:20px;
+text-align:center;
+font-family:Tahoma, Verdana;
+color:#dddddd;
+font-size:12px;
+}
+-->
+</style>
+</head>
+
+<body>
+<div id="top">
+<table width="1000px" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td id="top_logo_left"></td>
+    <td id="top_logo"><a href="index.php"><img src="images/index_logo.png"/></a></td>
+    <td>
+      <div id="top_pic"><span><script type="text/javascript">showlogin();</script></span></div>
+      <div id="top_search">
+        <span id="top_language">Language:&nbsp;&nbsp;<strong>English</strong>&nbsp;&nbsp;<a href="http://www.hrbeu.edu.cn/" target="_blank">Chinese</a>&nbsp;&nbsp;<a href="http://rus.hrbeu.edu.cn/" target="_blank">Russian</a></span>
+        <span id="top_serach">
+            <form action="showsresult.php?columnid=0">
+              <div style="padding-top:2px;">
+                <input type="text" name="title"/>
+                <input type="submit" value="Search" / style="height:23px;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </div>
+            </form>
+        </span>
+      </div>
+    </td>
+  </tr>
+</table>
+</div>
+
+<div id="location" align="center">
+	<div id="location_bg" style="width:1000px; text-align:left">
+		<div id="location_text">Your location: 首页</div>
+    </div>
+</div>
+
+<div id="main_fg" align="center">
+	<table width="1000px" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="20px"></td>
+        <td width="220px" valign="top" bgcolor="#e8eef5">
+        	<div id="nav"><style type="text/css">
+<!--
+body,div{
+margin:0px; padding:0px;
+}
+#topline{
+height:1px;
+background-color:#4c617e;
+}
+.navtext{
+text-decoration:none
+}
+.line{
+height:1px;
+background-color:#e2e9f2;
+}
+.normal{
+height:32px;
+background-color:#4c617e;
+text-align:left;
+color:#FFFFFF;
+font-family:Verdana, Tahoma;
+font-size:13px;
+line-height:31px;
+padding-left:12px;
+}
+.hover{
+height:32px;
+background-color:#eff3f8;
+text-align:left;
+color:#4c617e;
+font-family:Verdana, Tahoma;
+font-size:13px;
+line-height:31px;
+padding-left:10px;
+cursor:pointer;
+}
+-->
+</style>
+
+<div id="topline"></div>
+<a class="navtext" href="/">
+<div class="normal" onmouseover="this.className='hover'" onmouseout="this.className='normal'">Home</div></a>
+<div class="line"></div>
+<a class="navtext" href="showcolumn.php?columnid=47">
+<div class="normal" onmouseover="this.className='hover'" onmouseout="this.className='normal'">News and Notice</div></a>
+<div class="line"></div>
+<a class="navtext" href="showcolumn.php?columnid=1">
+<div class="normal" onmouseover="this.className='hover'" onmouseout="this.className='normal'">University</div></a>
+<div class="line"></div>
+<a class="navtext" href="showcolumn.php?columnid=3">
+<div class="normal" onmouseover="this.className='hover'" onmouseout="this.className='normal'">Staff</div></a>
+<div class="line"></div>
+<a class="navtext" href="showcolumn.php?columnid=4">
+<div class="normal" onmouseover="this.className='hover'" onmouseout="this.className='normal'">Living on Campus</div></a>
+<div class="line"></div>
+<a class="navtext" href="showcolumn.php?columnid=5">
+<div class="normal" onmouseover="this.className='hover'" onmouseout="this.className='normal'">Academic Departments</div></a>
+<div class="line"></div>
+<a class="navtext" href="showcolumn.php?columnid=6">
+<div class="normal" onmouseover="this.className='hover'" onmouseout="this.className='normal'">Programs</div></a>
+<div class="line"></div>
+<a class="navtext" href="showcolumn.php?columnid=7">
+<div class="normal" onmouseover="this.className='hover'" onmouseout="this.className='normal'">International Cooperation</div></a>
+<div class="line"></div>
+<a class="navtext" href="showcolumn.php?columnid=8">
+<div class="normal" onmouseover="this.className='hover'" onmouseout="this.className='normal'">Research</div></a>
+<div class="line"></div>
+<a class="navtext" href="http://studyheu.hrbeu.edu.cn/english/index.asp" target="_blank">
+<div class="normal" onmouseover="this.className='hover'" onmouseout="this.className='normal'">Prospective Students</div></a>
+<div class="line"></div>
+<a class="navtext" href="showcolumn.php?columnid=10">
+<div class="normal" onmouseover="this.className='hover'" onmouseout="this.className='normal'">Business</div></a>
+<div class="line"></div>
+<a class="navtext" href="showcolumn.php?columnid=11">
+<div class="normal" onmouseover="this.className='hover'" onmouseout="this.className='normal'">Administration & Service Dept.</div></a>
+<div class="line"></div>
+<a class="navtext" href="showarticle.php?articleid=394">
+<div class="normal" onmouseover="this.className='hover'" onmouseout="this.className='normal'">Contact Us</div></a>
+<div class="line"></div></div>
+            <div id="email">
+                <div id="email_title">E-mail System</div>
+                <div style="display:none"><form action="http://mail.hrbeu.edu.cn/cgi-bin/login" method="post" name="form1" target="_blank" id="form1"></div>
+                <table width="90%" border="0" cellspacing="0" cellpadding="4" style="font-family:Tahoma; font-size:12px; line-height:22px;">
+                    <tr>
+                      <td align="right">Username:</td>
+                      <td align="left"><input name="LoginName" type="text" class="navigatetext" id="LoginName"/></td>
+                    </tr>
+                    <tr>
+                      <td align="right">Password:</td>
+                      <td align="left"><input name="Password" type="password" class="navigatetext" id="Password"/><input name="domain" type="hidden" id="domain" value="hrbeu.edu.cn" /></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td align="left"><input type="submit" value="LOGIN" class="navigatebottom">&nbsp;&nbsp;<input type="reset" value="RDFILL" class="navigatebottom"></td>
+                    </tr>
+                </table>
+                </form>
+          </div>
+        </td>
+        
+        <td id="main_bg" valign="top">
+          <div id="main_note">
+            <div><span>Harbin Engineering University</span> is defining her distinctive position in the nation's development strategy by specializing in shipping industry, ocean exploration and nuclear application. By also leading a series of reforms in teaching, scientific research and informa-tion management systems, Harbin Engineering University is expanding her role as China's premier comprehensive international university now and into the 21st century.
+            </div>
+          </div>
+          <div style="clear:both; height:0px;"></div>
+          <div id="main_left">
+            <div id="main_news">
+                <div style="text-align:left">
+                  <span id="main_news_title">News and Notice</span>
+                  <span id="main_news_more"><a href="showcolumn.php?columnid=47">MORE</a>..</span>
+                </div>
+                <div class="main_news_line"></div>
+                <div id="main_news_fg">
+                    
+                    	<div style="height:7px"></div>
+                        <div id="news_time">07-23 10:55</div>
+                        <div id="news_title"><a href="showarticle.php?articleid=432" target="_blank">Two HEU Teachers Attended the 25th World Universiade Summer Sports and</a></div>
+                    
+                    	<div style="height:7px"></div>
+                        <div id="news_time">07-23 10:10</div>
+                        <div id="news_title"><a href="showarticle.php?articleid=431" target="_blank">The Rate of HEU 2009 Graduate Student Taking Post-graduate Examination</a></div>
+                    
+                    	<div style="height:7px"></div>
+                        <div id="news_time">07-23 10:09</div>
+                        <div id="news_title"><a href="showarticle.php?articleid=430" target="_blank">The 15th “May Fourth Cup”:  Over 100 Works Won Awards and the College </a></div>
+                    
+                    	<div style="height:7px"></div>
+                        <div id="news_time">07-23 10:06</div>
+                        <div id="news_title"><a href="showarticle.php?articleid=429" target="_blank">“North-east University Education Alliance”was Officially Established</a></div>
+                    
+                    	<div style="height:7px"></div>
+                        <div id="news_time">07-20 15:01</div>
+                        <div id="news_title"><a href="showarticle.php?articleid=428" target="_blank">The 4th “I Support myself to College” Recruitment Expo was Held at HEU</a></div>
+                    
+                </div>
+                <div class="main_news_line"></div>         
+                <div class="letterlink">
+                	<a href="showsresult.php?firstletter=a">A</a> - <a href="showsresult.php?firstletter=b">B</a> - <a href="showsresult.php?firstletter=c">C</a> - <a href="showsresult.php?firstletter=d">D</a> - <a href="showsresult.php?firstletter=e">E</a> - <a href="showsresult.php?firstletter=f">F</a> - <a href="showsresult.php?firstletter=g">G</a> - <a href="showsresult.php?firstletter=h">H</a> - <a href="showsresult.php?firstletter=i">I</a> - <a href="showsresult.php?firstletter=j">J</a> - <a href="showsresult.php?firstletter=k">K</a> - <a href="showsresult.php?firstletter=l">L</a> - <a href="showsresult.php?firstletter=m">M</a> - <a href="showsresult.php?firstletter=n">N</a> - <a href="showsresult.php?firstletter=o">O</a> - <a href="showsresult.php?firstletter=p">P</a> - <a href="showsresult.php?firstletter=q">Q</a> - <a href="showsresult.php?firstletter=r">R</a> - <a href="showsresult.php?firstletter=s">S</a> - <a href="showsresult.php?firstletter=t">T</a> - <a href="showsresult.php?firstletter=u">U</a> - <a href="showsresult.php?firstletter=v">V</a> - <a href="showsresult.php?firstletter=w">W</a> - <a href="showsresult.php?firstletter=x">X</a> - <a href="showsresult.php?firstletter=y">Y</a> - <a href="showsresult.php?firstletter=z">Z</a>
+                </div> 
+            </div>
+            <div id="main_flash">
+				<SCRIPT language="JavaScript"><!--
+                today=new Date();
+                jran=today.getTime();
+                function rnd() {
+                    ia=9301;
+                    ic=49297;
+                    im=233280;
+                    jran = (jran*ia+ic) % im;
+                    return jran/(im*1.0);
+                };
+                function rand(number) {
+                    return Math.ceil(rnd()*number);
+                };
+                document.write("<CENTER>");
+                for(i=1;i<=1;i++) {
+                
+                myNum=(rand(5)); 
+                //please adjust the number here, the number "3" mean three pieces.
+
+                if(myNum == 1) document.write("<img src='images/flash_pic1.jpg'>"); 
+                if(myNum == 2) document.write("<img src='images/flash_pic2.jpg'>"); 
+                if(myNum == 3) document.write("<img src='images/flash_pic3.jpg'>");
+                if(myNum == 4) document.write("<img src='images/flash_pic4.jpg'>");
+                if(myNum == 5) document.write("<img src='images/flash_pic5.jpg'>");
+
+                //Add or Remove above sentences up to the pieces of BANNER. Something behind “src” is the  save location of BANNER.
+
+                else {
+                document.write();
+                }
+                };
+                document.write("</CENTER>");
+                //-->
+                </SCRIPT>
+            </div>
+          </div>
+          <div id="main_right">
+          	<div class="main_right_title">Quick links</div>
+            <div class="main_right1"><a href="http://gongxue.cn" target="_blank">Gongxue Network</a></div>
+            <div class="main_right1"><a href="http://gxzb.hrbeu.edu.cn/" target="_blank">Gongxue Weekly</a></div>
+            <div class="main_right1"><a href="http://gongxue.cn/gongxuetv/" target="_blank">Gongxue TV </a></div>
+            <div class="main_right1"><a href="http://camel.hrbeu.edu.cn/default.htm" target="_blank">Office System</a></div>
+            <div class="main_right1"><a href="http://panda.hrbeu.edu.cn/" target="_blank">Admission Employment</a></div>
+            <div class="main_right1"><a href="http://lg.hrbeu.edu.cn/" target="_blank">Logistics Services</a></div>
+            
+            <div style="clear:both; height:10px"></div>
+            
+            <div class="main_right_title">Topic Website</div>
+            <div class="main_right2"><a href="showcolumn.php?columnid=48" target="_blank">2010 ACM/ICPC World Finals</a></div>
+            <div class="main_right2"><a href="http://conference.hrbeu.edu.cn/" target="_blank">Convention Center</a></div>
+            <div class="main_right2"><a href="http://dsm.hrbeu.edu.cn/" target="_blank">Digital Ship Museum</a></div>
+            <div class="main_right2"><a href="http://jjjc.hrbeu.edu.cn/DISWeb/Indexmain.aspx" target="_blank">Bell</a></div>
+            
+            <div style="clear:both; height:10px"></div>
+            
+            <div class="main_right_title">Fast Track</div>
+            <div id="main_right3" style="text-align:center">
+                  <div style="height:11px"></div>
+                  <select name="jumpMenu" id="jumpMenu" onchange="MM_jumpMenu('parent',this,0)">
+                    <option value="#">Agencies Links</option>
+                    <option value="http://jw.hrbeu.edu.cn/">Office of Educational Administration</option>
+                    <option value="http://zzb.hrbeu.edu.cn/">Organization Department</option>
+                    <option value="http://gongxue.cn/">Propaganda Department</option>
+                  </select>
+                  <div style="height:11px"></div>
+                  <select name="jumpMenu" id="jumpMenu" onchange="MM_jumpMenu('parent',this,0)">
+                    <option>Departments Links</option>
+                    <option value="http://heusei.hrbeu.edu.cn/example/">College of Shipbuilding Engineening</option>
+                    <option value="http://gongxue.cn/hangjianxueyuan/">College of Aeropace and Civil Engineering</option>
+                    <option value="http://gongxue.cn/dongnengxueyuan/">College of Power and Energy Engineering</option>
+                    <option value="http://heuac.hrbeu.edu.cn/">College of Automation</option>
+                    <option value="http://gongxue.cn/shuishengxueyuan/">College of Underwater Acoustic Engineering</option>
+                    <option value="http://gongxue.cn/cstc/">College of Computer Science and Technology</option>
+                    <option value="http://gongxue.cn/jidianxueyuan/">College of Mechanical and Electrical Engineering</option>
+                    <option value="http://icec.hrbeu.edu.cn/">College of Information and Communication Engineering</option>
+                    <option value="http://gongxue.cn/jingguanxueyuan/">College of Economics and Management</option>
+                    <option value="http://gongxue.cn/caihuaxueyuan/">College of Materials Science and Chemical Engineering</option>
+                    <option value="http://gongxue.cn/lixueyuan/">College of Science</option>
+                    <option value="http://fld.hrbeu.edu.cn/">Foreign Language Department</option>
+                    <option value="http://www.gongxue.cn/renwenxueyuan/">College of Humanities and Social Sciences</option>
+                    <option value="http://heucice.hrbeu.edu.cn/">College of International Cooperative Education</option>
+                    <option value="http://gongxue.cn/tixunbu/">College of Nuclear Science and Technology</option>
+                    <option value="http://heucfe.hrbeu.edu.cn/">College of Further Education</option>
+                    <option value="http://gongxue.cn/tixunbu/">Physical Education Department</option>
+                    <option value="http://gongxue.cn/dongnengxueyuan/">Engineering Training Centre</option>
+                  </select>
+                  <div style="height:11px"></div>
+                  <select name="jumpMenu" id="jumpMenu" onchange="MM_jumpMenu('parent',this,0)">
+                    <option>Other Links</option>
+                    <option value="http://www.buaa.edu.cn/">Beihang University</option>
+                    <option value="http://www.bit.edu.cn/">Beijing Institute of Technology</option>
+                    <option value="http://www.hit.edu.cn/">Harbin Institute of Technology</option>
+                  </select>
+                  <div style="height:11px; overflow:hidden;"></div>
+            </div>
+          </div>
+        </td>
+        
+        <td id="main_shadow"></td>
+      </tr>
+    </table>
+</div>
+<div id="bottom_line"></div>
+<div id="bottom_bg">© Harbin Engineering University. All Rights Reserved. Harbin, HLJ, P.R.China 0086 (0451) 82519213.</div>
+</body>
+</html>

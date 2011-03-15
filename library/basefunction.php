@@ -222,6 +222,7 @@ function readcache()
 {
 	//如果处在debug模式，则不读缓存
 	global $_DEBUG;
+	global $language;
 	if($_DEBUG==true)
 		return;
 		
@@ -238,6 +239,7 @@ function readcache()
 //创建缓存
 function buildcache($content)
 {
+	global $language;
 	$specialletters = array(":", "/", "&", "?", ".");
 	$cachefilepath = getroot()."/temp/".str_replace($specialletters, "", $_SERVER['REQUEST_URI']).".cache";
 	if(!file_exists(getroot()."/temp/"))

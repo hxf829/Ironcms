@@ -210,6 +210,8 @@ function submitComment()
 			}
 			//alert(aId);
 			//alert(content);
+			oldcontent = content;
+			content = encodeURI(content);
 			$.ajax({
 				   type: "POST",
 				   async: false,
@@ -225,7 +227,7 @@ function submitComment()
 							   //添加新评论到当前页
 							   var newCommentStr = "<div class='comment'><div class='author'>\
 							   "+($.cookie("username")!=null?$.cookie("username"):"anonymity")+"</div><div class='postTime'>"+now()+"</div>\
-													<div class='commentcontent'>"+content+"</div><ul class='operations'>\
+													<div class='commentcontent'>"+oldcontent+"</div><ul class='operations'>\
 													<LI><A class='quote' onClick=\"alert('Please refresh this page!')\" href='#'>回复</A></LI>\
 													<LI class=support><A onClick=\"alert('Please refresh this page!')\" href='#'>支持</A>[<SPAN>0</SPAN>]</LI>\
 													<LI class=against><A onClick=\"alert('Please refresh this page!')\" href='#'>反对</A>[<SPAN>0</SPAN>]</LI>\

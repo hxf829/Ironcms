@@ -13,7 +13,7 @@ function showchildcolumncomment ($columnid)
         $childid = explode("|", $childcolumn);
         foreach ($childid as $id) 
         {
-            echo "<a href='admin_comment.php?columnid=$id'>".getcolumnformationBycolumnid($id,"columnnamezh")."</a>　";
+            echo "<a href='admin_comment.php?columnid=$id'>".getcolumnformationBycolumnid($id,"columnname")."</a>　";
         }
     }
     else 
@@ -49,9 +49,9 @@ function showcomment($columnid, $currentpage, $pagesize=10)
 		echo "<td align='center'>".$row["username"]."</td>\n";
 		echo "<td align='center'>";
 		if($row["ifpass"]==="0")
-			echo gettext_r("havePass");
-		else 
 			echo gettext_r("notPass");
+		else 
+			echo gettext_r("havePass");
 		echo "</td>\n";
 		echo "<td align='center' width='100'><a href=\"javascript:if(confirm('".gettext_r("ifDelete")."'))jump('admin_comment.php','delete',".$row["id"].")\">".gettext_r("delete")."</a></td>\n";
 		echo "</tr>";

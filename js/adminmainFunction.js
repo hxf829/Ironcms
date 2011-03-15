@@ -12,6 +12,7 @@ function checklogin()
 		{
 			$.ajax({
 				   url: "checklogin.php?time="+now(),
+				   async: false,
 				   error: function(){alert("网络连接错误");},
 				   success: function(Msg){
 					   //alert(Msg);

@@ -6,9 +6,11 @@
     //如果是回复
     $quoteid = $_POST["quoteid"];//$quoteid为要回复的comment的id
     
-    $commentcontent = $_POST["commentcontent"];
-    
-	$commentcontent = htmlentities($commentcontent); 
+    $commentcontent = urldecode($_POST["commentcontent"]);
+	//$commentcontent =  urldecode($commentcontent);
+    //echo $commentcontent;
+	$commentcontent = htmlentities($commentcontent,ENT_QUOTES,"UTF-8"); 
+	//echo $commentcontent;
     //用户信息
     $username = getUserInfo("username");
     if($username=="notdefined")
