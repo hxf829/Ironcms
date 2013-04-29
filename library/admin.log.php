@@ -3,7 +3,7 @@
 	{
 		var $id;//日志编号
 		var $adminName;//管理员名
-		var $logType;//管理员名
+		var $logType;//日志类型
 		var $operateContent;//操作内容
 		var $ip;//所在ip
 		var $operateTime;//操作时间
@@ -25,7 +25,6 @@
 			}
 			if(!getresult($insertsql))
 			{
-				echo $insertsql;
 				return false;
 			}
 			return true;
@@ -97,7 +96,7 @@
 			if($currentpage==1)
 				echo gettext_r("firstPage")." | ".gettext_r("prePage")." | ";
 			else
-				echo "<a href='admin_article.php?columnid=$columnid&currentpage=1'>".gettext_r("firstPage")."</a> | <a href='admin_article.php?columnid=$columnid&currentpage=".($currentpage-1)."'>".gettext_r("prePage")."</a> | ";
+				echo "<a href='admin_log.php?logtype=$logtype&currentpage=1'>".gettext_r("firstPage")."</a> | <a href='admin_log.php?logtype=$logtype&currentpage=".($currentpage-1)."'>".gettext_r("prePage")."</a> | ";
 			
 			$temppage = 1;
 			if(($currentpage-1)<5)
@@ -168,7 +167,7 @@
 			if($currentpage==$allpage)
 				echo "| ".gettext_r("nextPage")." | ".gettext_r("lastPage");
 			else
-				echo "| <a href='admin_article.php?columnid=$columnid&currentpage=".($currentpage+1)."'>".gettext_r("nextPage")."</a> | <a href='admin_article.php?columnid=$columnid&currentpage=$allpage'>".gettext_r("lastPage")."</a>";
+				echo "| <a href='admin_log.php?logtype=$logtype&currentpage=".($currentpage+1)."'>".gettext_r("nextPage")."</a> | <a href='admin_log.php?logtype=$logtype&currentpage=$allpage'>".gettext_r("lastPage")."</a>";
 		}
 	}
 ?>

@@ -223,4 +223,8 @@
 	//验证码       点击更换图片->
 	$_lang["confirmCode"] = "Comfirm Code";
 	$_lang["confirmCodeTips"] = "Click to change image";
+	/************************	
+	其他名称
+	************************/
+	$_lang["processing"] = "processing..."
 ?>

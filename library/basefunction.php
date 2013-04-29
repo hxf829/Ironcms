@@ -248,4 +248,9 @@ function buildcache($content)
 	fwrite($fp, $content);
 	fclose($fp);
 }
+//加载外部功能
+function loadlibrary($libpath, $flag=0)
+{
+	require_once($libpath);
+}
 ?>

@@ -1,6 +1,7 @@
 <?php
 	session_start();
 	$_DEBUG=true;//µ÷ÊÔÄ£Ê½
+
     include_once 'conn.php';
     include_once 'library/basefunction.php';
 	include_once 'lang/envinit.php';
@@ -8,6 +9,14 @@
     include_once 'templatefunction/Iron.article.php';
 	include_once 'templatefunction/Iron.column.php';
 	include_once 'templatefunction/Iron.label.php';
+	
+	loadlibrary("library/third/FirePHPCore/fb.php");
+
+	FB::log('Log message');
+	FB::info('Info message');
+	FB::warn('Warn message');
+	FB::error('Error message');	
+	
 	readcache();
 
 	$siteconfig = getresult("SELECT * FROM I_siteconfig LIMIT 0 , 1");

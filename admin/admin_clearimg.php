@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>修改密码</title>
+<title>清理图片</title>
 <link rel="stylesheet" type="text/css" href="css/functionstyle.css">
 <script type="text/javascript" src="../js/jquery.js"></script>
 <script type="text/javascript" src="../js/adminmainFunction.js"></script>
@@ -12,6 +12,7 @@
 <?php
 	include "../conn.php";
 	include_once "../library/basefunction.php";
+	include_once "../lang/envinit.php";
 	function fileextension($file_name)   
 	{   
 		$extend = pathinfo($file_name);   
@@ -47,12 +48,22 @@
 		//呵呵，这个函数只能删除空文件夹，有文件的文件夹会失败
 		if ($index != 0)
 		{
-			rmdir($imgdir);
-			echo "删除".$imgdir."<br>";
+			if(rmdir($imgdir))
+			{
+				echo "删除".$imgdir."<br>";
+			}
 		}
 	}
+	echo "<table width='100%' border='0' cellpadding='0' cellspacing='1' class='function'>\n";
+	echo "<tr class='header'>\n";
+	echo "<td align='center'>".gettext_r("processing")."</td>\n";
+	echo "</tr>\n";
+	echo "<tr>\n";
+	echo "<td align='left'>";
 	checkimg(getroot()."/userfiles");
 	echo "清理完毕";
+	echo "</td>\n";
+	echo "</tr>\n";
 ?>
 </div>
 </body>

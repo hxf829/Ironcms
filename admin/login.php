@@ -43,7 +43,6 @@ if ($action == "login") {
 			$newLog->adminName = $adminname;
 			$newLog->logType = 0;
 			$newLog->operateContent = gettext_r("login").gettext_r("success");
-			echo $newLog->operateContent;
 			$newLog->ip = $_SERVER ["REMOTE_ADDR"]."";
 			if(!$newLog->Add())
 				echo ("<script type=\"text/javascript\">alert('日志存储错误')</script>");

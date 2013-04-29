@@ -16,6 +16,7 @@ session_start();
 include_once "../conn.php";
 include_once "../library/basefunction.php";
 include_once "../lang/envinit.php";
+include_once "../library/admin.log.php";
 //检查权限
 if(getlogininfo("adminrole")==NULL||getlogininfo("adminrole")!="0")
 	die(gettext_r("noRight"));
@@ -23,9 +24,18 @@ if(getlogininfo("adminrole")==NULL||getlogininfo("adminrole")!="0")
 if($_POST["submit"]==gettext_r("submit"))
 {
 	//修改网站配置
-	if(getresult("update I_siteconfig set domain='".$_POST["sitedomain"]."',sitename='".$_POST["sitename"]."',logo='".$_POST["logo"]."', adminemail='".$_POST["adminemail"]."', keywords='".str_replace("'","''",$_POST["keywords"])."', copyright='".str_replace("'","''",$_POST["copyright"])."',indextemplate=".$_POST["indextemplate"].",adminlang='".$_POST["adminlang"]."',frontlang='".$_POST["frontlang"]."'"))
+	$updateconfigsql="update I_siteconfig set domain='".$_POST["sitedomain"]."',sitename='".$_POST["sitename"]."',logo='".$_POST["logo"]."', adminemail='".$_POST["adminemail"]."', keywords='".str_replace("'","''",$_POST["keywords"])."', copyright='".str_replace("'","''",$_POST["copyright"])."',indextemplate=".$_POST["indextemplate"].",adminlang='".$_POST["adminlang"]."',frontlang='".$_POST["frontlang"]."'";
+//	if(getresult("update I_siteconfig set domain='".$_POST["sitedomain"]."',sitename='".$_POST["sitename"]."',logo='".$_POST["logo"]."', adminemail='".$_POST["adminemail"]."', keywords='".str_replace("'","''",$_POST["keywords"])."', copyright='".str_replace("'","''",$_POST["copyright"])."',indextemplate=".$_POST["indextemplate"].",adminlang='".$_POST["adminlang"]."',frontlang='".$_POST["frontlang"]."'"))
+	if(getresult($updateconfigsql))
 	{
-		echo "<script type='text/javascript'>alert('".gettext_r("update").gettext_r("success")."');window.location=window.location;</script>";
+		$newLog = new Log();
+		$newLog->adminName = $_SESSION ["adminname"];
+		$newLog->logType = 1;
+		$newLog->operateContent = 'update config';
+		$newLog->ip = $_SERVER ["REMOTE_ADDR"]."";
+		if(!$newLog->Add())
+				echo ("<script type=\"text/javascript\">alert('日志存储错误')</script>");
+		echo "<script type='text/javascript'>alert('".gettext_r("update").gettext_r("success")."');window.location=window.location;</script>";	
 	}
 	else
 	{

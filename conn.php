@@ -10,8 +10,8 @@
 				break;
 			case E_WARNING:
 			case E_USER_WARNING:
-				echo $errfile." ".$errline.":".$errstr;
-				break;
+				//echo $errfile." ".$errline.":".$errstr;
+				//break;
 			default:
 				return true;
 		}
@@ -23,11 +23,11 @@
 	set_error_handler("myErrorHandler");
 	
 	try{
-	$link_mysql = @mysql_pconnect("localhost","root","");
+	$link_mysql = mysql_pconnect("localhost","root","142232");
 	mysql_query("SET NAMES 'utf8'");  
 	if(!$link_mysql)
 		throw new Exception("Can't connect the database server!");
-	@mysql_select_db("iron_cms",$link_mysql) or die("Have no such database!");
+	mysql_select_db("iron_cms",$link_mysql) or die("Have no such database!");
 	
 	}catch(Exception $e){
 		die($e->getMessage());
