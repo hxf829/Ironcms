@@ -2,7 +2,7 @@
 	require "en.php";
 	if($_SESSION["adminlang"]==null || $_SESSION["frontlang"]==null || $_SESSION["adminlang"]=="" || $_SESSION["frontlang"]=="")
 	{
-		echo $_SESSION["adminlang"];
+		//echo $_SESSION["adminlang"];
 		//从数据库中读取配置信息，初始化语言环境
 		$result = getresult("select * from I_siteconfig");
 		if(getresultNumrows($result) < 1)

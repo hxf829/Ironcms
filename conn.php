@@ -23,7 +23,7 @@
 	set_error_handler("myErrorHandler");
 	
 	try{
-	$link_mysql = mysql_pconnect("localhost","root","142232");
+	$link_mysql = mysql_pconnect("127.0.0.1","root","142232");
 	mysql_query("SET NAMES 'utf8'");  
 	if(!$link_mysql)
 		throw new Exception("Can't connect the database server!");

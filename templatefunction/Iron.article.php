@@ -247,7 +247,7 @@ function getPage($pagesize)
         //消除文章数为零时显示下一页链接的bug
     if ($countofarticle == 0)
         $allpage += 1;
-    echo "|".$pagesize." ".$currentpage;
+    //echo "|".$pagesize." ".$currentpage;
     $Page .= gettext_r("total")." <b> " . $allpage . " </b> ".gettext_r("page")."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
     if ($currentpage == 1)
         $Page .= gettext_r("firstPage")." | ".gettext_r("prePage")." | ";

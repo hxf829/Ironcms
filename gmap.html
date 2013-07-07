@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+html,body,#map{
+margin:0px;
+width:100%;
+height:100%;
+z-index:0;
+}
+#tip{
+position:absolute;
+display:block;
+z-index:1;
+font:"微软雅黑";
+font-size:40px;
+font-weight:bolder;
+color:#FFFFFF;
+background:#66CCFF;
+top:10px;
+height:37px;
+left:80px;
+cursor:pointer;
+width:427px;
+background:url(images/maptitle.png);
+}
+#movie{
+position:absolute;
+z-index:2;
+top:45px;
+left:80px;
+width:427px;
+display:none;
+}
+</style>
+<title>Google Map</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAATd4F5kGy9805Uaar6vTWoxT1pcQrdfCd_p12j8gIv6NTVOl5GhRSYLQ7OGIVV62aj3Fjzbsv0OsEVQ"
+    type="text/javascript">
+  </script>
+  
+<script type="text/javascript">
+function DoPlay()
+{
+	if (wmp.FileName!='')
+	{
+		wmp.Play();   
+	}
+}
+function DoStop()
+{
+	wmp.Stop();
+	wmp.FileName = '';
+}
+ 
+function DoPause()
+{
+    wmp.Pause();
+}
+function SetVideo(url)
+{
+	wmp.FileName = url;
+	wmp.Play();
+}
+function SetDisplaySize(setting)
+{
+	wmp.DisplaySize = setting;
+}
+ 
+function SetV(form)
+{
+SetVideo('http://english.hrbeu.edu.cn/Videos/'+form.value);
+}
+/*
+*作者:Iron
+*联系方式:hxf829@163.com
+*/
+//控制视频
+$(document).ready(
+	function() 
+	{ 
+		$("#tip").click(function(){
+			if($("#movie:visible").size()>0)
+			{
+				$("#movie").hide();
+				$("#tip").attr("title","点击观看视频");
+				DoPause();
+			}
+			else
+			{
+				$("#movie").show();
+				$("#tip").attr("title","点击关闭视频");
+				DoPlay();
+			}
+		}
+		);
+	}
+);
+//创造地标
+function createMarker(point, info)
+{
+	var marker = new GMarker(point,{icon:G_DEFAULT_ICON});
+	//alert(info);
+	GEvent.addListener(marker,"mouseover",function(){marker.openInfoWindowHtml(info);});
+	return marker;
+}
+//加载地图
+function LoadMap()
+{
+	if (GBrowserIsCompatible()) 
+	{ 
+            var map = new GMap2(document.getElementById('map')); 
+            map.setCenter(new GLatLng(45.773764, 126.675024),16); 
+			map.setMapType(G_SATELLITE_MAP);
+            map.addControl(new GLargeMapControl()); 
+            map.addControl(new GMapTypeControl());
+			map.enableScrollWheelZoom();
+			//加载地标
+			mgr = new GMarkerManager(map, {borderPadding:1});
+			var GMarkers = new Array();//定义地标数组
+			
+			GDownloadUrl("./gmap.xml", function (doc)
+			{
+				var xmldoc = GXml.parse(doc);
+				var xmlGMarkers = xmldoc.documentElement.getElementsByTagName("m");
+				
+				for(var i=0; i < xmlGMarkers.length; i++)
+				{
+					var lat = parseFloat(xmlGMarkers[i].getAttribute("lat"));
+					var lng = parseFloat(xmlGMarkers[i].getAttribute("lng"));
+					var point = new GLatLng(lat,lng);
+					var info = xmlGMarkers[i].getAttribute("info");
+					
+					var marker = createMarker(point,info);
+					GMarkers.push(marker);
+					//alert(info);
+				}
+				//alert(GMarkers.length);
+				mgr.addMarkers(GMarkers, 0);
+		    	mgr.refresh();
+			}
+			);
+    } 
+}
+</script>
+</head>
+<body onunload="GUnload()" onload="LoadMap()">
+<div id="map"></div>
+<div id="tip" title="点击观看视频"></div>
+<div id="movie">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+		    <tr>
+			   <td  height="1"></td>
+			</tr>
+			<tr>
+				<td align="left" valign="top" bgcolor=#000000 width="430">
+				<object classid=CLSID:22D6F312-B0F6-11D0-94AB-0080C74C7E95 codebase=http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=5,1,52,701 height=342 id=wmp type=application/x-oleobject width=420 VIEWASTEXT>
+                  <param name="FileName" value="/video/English.wmv">
+                  <param name="AutoStart" value="0">
+                  <param name="AutoRewind" value="0">
+                  <param name="AnimationAtStart" value="0">
+                  <param name="ShowControls" value="0">
+                  <param name="ClickToPlay" value="-1">
+                  <param name="EnableContextMenu" value="0">
+                  <param name="EnablePositionControls" value="0">
+                  <param name="Balance" value="0">
+                  <param name="ShowStatusBar" value="-1">
+                  <param name="AutoSize" value="0">
+                  <param name="AudioStream" value="-1">
+					<param name="AllowScan" value="-1">
+					<param name="AllowChangeDisplaySize" value="-1">
+					<param name="BaseURL" value>
+					<param name="BufferingTime" value="5">
+					<param name="CaptioningID" value>
+					<param name="CursorType" value="0">
+					<param name="CurrentPosition" value="-1">
+					<param name="CurrentMarker" value="0">
+					<param name="DefaultFrame" value="1">
+					<param name="DisplayBackColor" value="0">
+					<param name="DisplayForeColor" value="16777215">
+					<param name="DisplayMode" value="0">
+					<param name="DisplaySize" value="4">
+					<param name="Enabled" value="-1">
+					<param name="EnableFullScreenControls" value="0">
+					<param name="EnableTracker" value="-1">
+					<param name="InvokeURLs" value="-1">
+					<param name="Language" value="-1">
+					<param name="Mute" value="0">
+					<param name="PlayCount" value="1">
+					<param name="PreviewMode" value="0">
+					<param name="Rate" value="1">
+					<param name="SAMILang" value>
+					<param name="SAMIStyle" value>
+					<param name="SAMIFileName" value>
+					<param name="SelectionStart" value="-1">
+					<param name="SelectionEnd" value="-1">
+					<param name="SendOpenStateChangeEvents" value="-1">
+					<param name="SendWarningEvents" value="-1">
+					<param name="SendErrorEvents" value="-1">
+					<param name="SendKeyboardEvents" value="0">
+					<param name="SendMouseClickEvents" value="0">
+					<param name="SendMouseMoveEvents" value="0">
+					<param name="SendPlayStateChangeEvents" value="-1">
+					<param name="ShowCaptioning" value="0">
+					<param name="ShowAudioControls" value="-1">
+					<param name="ShowDisplay" value="0">
+					<param name="ShowGotoBar" value="0">
+					<param name="ShowPositionControls" value="-1">
+					<param name="ShowTracker" value="-1">
+					<param name="TransparentAtStart" value="0">
+					<param name="VideoBorderWidth" value="0">
+					<param name="VideoBorderColor" value="0">
+					<param name="VideoBorder3D" value="0">
+					<param name="Volume" value="-600">
+					<param name="WindowlessVideo" value="0">
+                  <embed src width="430" height="342"  autostart="true" type="application/x-mplayer2" pluginspage="http://www.microsoft.com/Windows/Downloads/Contents/Products/MediaPlayer/" filename enablecontextmenu="false" clicktoplay="true" enablepositioncontrols="false" showcontrols="false" showstatusbar="true" showdisplay="ture" autorewind="ture" animationatstart="false" balance="0" autosize="0"></embed>
+                </object></td>
+</tr></table>
+</div>
+</body>
+</html>
